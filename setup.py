@@ -17,7 +17,7 @@ def get_requirements(file_path:str)-> List[str]:
     return requirements
 
 setup(
-name ='Machine_learning_project',
+name ='aiml_project',
 version ='0.0.1',
 author = 'shubham kumar',
 author_email = 'shubamkumar3039@gmail.com',
