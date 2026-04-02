@@ -18,7 +18,7 @@ from ..utils import save_object
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path: str = os.path.join('artifacts', "proprocessor.pkl")
+    preprocessor_obj_file_path: str = os.path.join('artifacts', "preprocessor.pkl")
 
 class DataTransformation:
     def __init__(self):
@@ -26,7 +26,7 @@ class DataTransformation:
 
     def get_data_transformer_object(self):
         '''
-        This function si responsible for data trnasformation
+        This function si responsible for data transformation
         
         '''
         try:
@@ -78,8 +78,8 @@ class DataTransformation:
     def initiate_data_transformation(self,train_path,test_path):
 
         try:
-            train_df=pd.read_csv(train_path)
-            test_df=pd.read_csv(test_path)
+            train_df=pd.read_csv('train.csv')
+            test_df=pd.read_csv('test.csv')
 
             logging.info("Read train and test data completed")
 
@@ -124,3 +124,4 @@ class DataTransformation:
             )
         except Exception as e:
             raise CustomException(e,sys)
+            
